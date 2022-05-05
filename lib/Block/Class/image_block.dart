@@ -16,5 +16,5 @@ class ImageBlock extends Block<String> {
     return const Text('imagem');
   }
 
-  ImageBlock(idBlock, this.link, date) : super(idBlock, text, date);
+  ImageBlock(idBlock, this.link, date) : super(idBlock, link, date);
 }

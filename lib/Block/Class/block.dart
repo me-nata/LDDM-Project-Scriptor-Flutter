@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class Block<T>{
-  int idBlock;
-  String date;
-  T content;
+  int? idBlock;
+  DateTime? date;
+  T? content;
 
   void edit(T newContent) {
     content = newContent;
@@ -11,5 +11,9 @@ abstract class Block<T>{
 
   Widget toWidget();
 
-  Block(this.idBlock, this.content, this.date);
+  Block(int? idBlock, T? content, DateTime? date) {
+    this.idBlock = idBlock ?? 0;
+    this.date = date ?? DateTime.now();
+    this.content = content ?? null;
+  }
 }
